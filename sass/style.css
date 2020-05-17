@@ -1,0 +1,173 @@
+body {
+  background-color: #00051de8;
+  overflow-x: hidden;
+}
+
+body h1,
+body p,
+body label {
+  color: white;
+}
+
+.alert {
+  width: 100%;
+  border-radius: 0px !important;
+  text-align: center;
+  color: white;
+  background-color: #00051de8;
+  font-weight: normal;
+  padding: 20px 10px;
+}
+
+.alert a {
+  font-weight: bold;
+  color: white;
+}
+
+header #div-header h1 {
+  font-size: 300%;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 577px) {
+  header #div-header h1 {
+    font-size: 250%;
+  }
+}
+
+header #div-header P {
+  font-size: 20px;
+}
+
+.d-buscador {
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.d-buscador div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.d-buscador div a {
+  margin: 10px 20px;
+}
+
+.paises {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.paises #tarjeta {
+  padding: 10px;
+  width: 500px;
+  margin: 20px auto;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #5e17eb;
+  -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.096);
+          box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.096);
+}
+
+.paises #tarjeta div {
+  width: 100%;
+  padding: 10px;
+}
+
+.paises #tarjeta div h4 {
+  color: white;
+  font-weight: bold;
+}
+
+.paises #tarjeta div h4 span {
+  font-weight: normal;
+}
+
+.paises #tarjeta div h6 {
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+.paises #tarjeta div h6 span {
+  font-weight: normal;
+}
+
+.paises #tarjeta div p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.paises #tarjeta div p span {
+  font-weight: normal;
+}
+
+.paises #tarjeta .card-body {
+  border-radius: 5px;
+}
+
+.paises #tarjeta #da {
+  padding: 20px;
+  background-color: #00051de8;
+  text-align: left;
+  border-radius: 5px;
+}
+
+footer .d-footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .d-footer div {
+  width: 50%;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
