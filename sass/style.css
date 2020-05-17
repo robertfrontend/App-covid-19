@@ -164,10 +164,13 @@ footer .d-footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .d-footer div {
-  width: 50%;
+  width: 500px;
+  margin: 10px auto;
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
