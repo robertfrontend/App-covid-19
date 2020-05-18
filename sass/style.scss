@@ -29,8 +29,16 @@ body {
 
 header {
     #div-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div {
+            width: 80%;
+        }
         h1 {
-            font-size: 300%;
+            font-size: 350%;
             font-weight: bold;
             @media screen and(max-width:577px) {
                     font-size: 250%;
@@ -38,6 +46,35 @@ header {
         }
         P {
             font-size: 20px;
+        }
+    }
+}
+
+.d-total {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #94949417;
+        padding: 10px;
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 30px;
+            font-weight: bold;
+            span {
+                font-weight: normal;
+                color: white;
+            }
         }
     }
 }
@@ -64,55 +101,20 @@ header {
     justify-content: space-evenly;
     align-items: center;
     #tarjeta{
-        padding: 10px;
-        width: 500px;
+        width: 350px;
         margin: 20px auto;
-        border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: $marino;
-        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.096);
+        background-color: $negrito;
+        border-radius: 40px;
+        border: 5px solid $marino;
+        color: white !important;
+        padding: 20px;
         div {
-            width: 100%;
-
-            padding: 10px;
-            h4{ 
-                color: white;
-                font-weight: bold;
-                span {
-                    font-weight: normal;
-                }
+            h4{
+                text-decoration: underline $marino;
             }
-            h6 {
-                font-size: 14px !important;
-                font-weight: bold;
-                span {
-                    font-weight: normal;
-                }
+            p {
+                margin: 0px;
             }
-            p{
-                font-size: 16px;
-                font-weight: bold;
-                span {
-                    font-weight: normal;
-                }
-            }
-        }
-        .card-body {
-            border-radius: 5px;
-        }
-        #da{
-            padding: 20px ;
-            background-color: $negrito;
-            text-align: left;
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
-            border-radius: 5px;
-
         }
     }
 }
