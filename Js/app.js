@@ -1,32 +1,41 @@
-const linkTotal = 'https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief';fetch(linkTotal)
-    .then(res => {
-        return res.json();
-    })
-    .then(data => {
-        htmlTotal = '';        
-        htmlTotal += `
-                <div>
-                    <p class="text-warning">
-                        ${data.confirmed}
-                    </p>
-                    <h3>Casos Confirmados</h3>
-                </div>
-                <div>
-                    <p class="text-danger" >
-                        ${data.deaths}
-                    </p>
-                    <h3>Muertes</h3>
+const dcarga = `
+<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+`;
 
-                </div>
-                <div>
-                    <p class="text-success" >
-                    ${data.recovered}
-                    </p>
-                    <h3>Recuperados</h3>
-                </div>
-        `;
-        document.querySelector('.total').innerHTML = htmlTotal;
-    });
+
+const linkTotal = 'https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief';
+window.onload = () => {
+    document.querySelector('.d-carga ').innerHTML = dcarga
+    fetch(linkTotal)
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            htmlTotal = '';        
+            htmlTotal += `
+                    <div>
+                        <p class="text-warning">
+                            ${Intl.NumberFormat().format(data.confirmed)}
+                        </p>
+                        <h3>Casos Confirmados</h3>
+                    </div>
+                    <div>
+                        <p class="text-danger" >
+                            ${Intl.NumberFormat().format(data.deaths)}
+                        </p>
+                        <h3>Muertes</h3>
+    
+                    </div>
+                    <div>
+                        <p class="text-success" >
+                        ${Intl.NumberFormat().format(data.recovered)}
+                        </p>
+                        <h3>Recuperados</h3>
+                    </div>
+            `;
+            document.querySelector('.total').innerHTML = htmlTotal;
+        });
+}
 
 
  //link de la api
@@ -51,16 +60,16 @@ const linkTotal = 'https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu
                          </div>
                          <div class="" id="da">
                              <p class="card-text text-warning ">
-                                 <span class="">Confirmados:</span>
-                                 ${paises.confirmed} 
+                                 <span class="text-light">Confirmados:</span>
+                                 ${Intl.NumberFormat().format(paises.confirmed)} 
                              </p>
                              <p class="card-text text-danger">
-                                 <span class="">Muertes: </span>
-                                 ${paises.deaths} 
+                                 <span class="text-light">Muertes: </span>
+                                 ${Intl.NumberFormat().format(paises.deaths)} 
                              </p>
                              <p class="card-text  text-success " >
-                                 <span class="">Recuperados:</span>
-                                 ${paises.recovered} 
+                                 <span class="text-light">Recuperados:</span>
+                                 ${Intl.NumberFormat().format(paises.recovered)} 
                              </p>
                          </div>
                      </div>
@@ -68,6 +77,8 @@ const linkTotal = 'https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu
              `;
          });
          document.querySelector('.resultados-paises').innerHTML = htmlRes;
+         document.querySelector('.d-carga ').innerHTML = ''
+
      });
 
 

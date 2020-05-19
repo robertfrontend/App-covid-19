@@ -5,9 +5,9 @@
 
 .seccion-Bienvenida{
     width: 100%;
-    .d-anuncio{
-        width: 100%;
-        height: 5vh;
+    .d-carga{
+        width: 100% !important;
+        height: 5vh !important;
     }
     p {
         margin: 0;
@@ -43,7 +43,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-
+                
             }
         }
         @media screen and(max-width:$breackPoint10) {
