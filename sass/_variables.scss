@@ -1,0 +1,39 @@
+// global
+body {
+    background-color: #00051d;
+    h1,
+    p,
+    label {
+        color: white;
+        margin: 0;
+    }
+    overflow-x: hidden;
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+	width: 10px;
+	background:transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+	background: royalblue;
+	border-radius: 30px;
+}
+
+//---colores
+$marino: #5e17eb;
+$cielo: #00bdd3;
+$negrito:  #00051de8;
+$negroso:  #00051dc4;
+$waring: #ffc107;
+$danger: #dc3545;
+$mariCla:#5e17eb18;
+
+
+//---breackpoint
+$breackPoint10: 1100px;

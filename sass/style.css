@@ -58,7 +58,7 @@ header .d-header .d-menu .d-logo {
 header .d-header .d-menu .d-logo p {
   color: white;
   margin: 0;
-  font-size: 25px;
+  font-size: 150%;
 }
 
 header .d-header .d-menu nav {
@@ -111,6 +111,183 @@ header .d-header .d-menu div .botonDonar {
   color: #ffc107;
 }
 
+@media screen and (max-width: 1100px) {
+  header .d-header .d-menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0px;
+    height: auto;
+  }
+  header .d-header .d-menu .d-logo {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+  }
+  header .d-header .d-menu nav {
+    width: 100%;
+    padding: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header .d-header .d-menu div {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .d-header .d-menu div a {
+    padding: 5px 80px !important;
+  }
+}
+
+#tarjeta {
+  border: 2px solid #5e17eb18;
+  background-color: #00051de8;
+  width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+#tarjeta div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tarjeta div h4 {
+  font-weight: bold;
+  color: white;
+  font-size: 35px;
+}
+
+#tarjeta div p {
+  margin: 0;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+
+#tarjeta div p span {
+  font-weight: normal;
+}
+
+.d-izq-menu {
+  width: 360px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 20px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.123);
+}
+
+.d-izq-menu .result {
+  border-top: 1px solid #5e17eb18;
+  border-left: 1px solid #5e17eb18;
+  border-right: 1px solid #5e17eb18;
+  background: #00051de8;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+.d-izq-menu .result div {
+  padding: 5px 0px;
+  text-align: center;
+}
+
+.d-izq-menu .result div h1 {
+  font-size: 30px;
+}
+
+.d-izq-menu .total {
+  border-left: 1px solid #5e17eb18;
+  border-right: 1px solid #5e17eb18;
+  border-bottom: 1px solid #5e17eb18;
+  background: #00051de8;
+  width: 100%;
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d-izq-menu .total div {
+  text-align: center;
+  padding: 5px 0px;
+}
+
+.d-izq-menu .total div h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.d-izq-menu .total div p {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+  .d-izq-menu {
+    width: 100%;
+  }
+}
+
 .seccion-Bienvenida {
   width: 100%;
 }
@@ -133,104 +310,12 @@ header .d-header .d-menu div .botonDonar {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap !important;
-      flex-wrap: wrap !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu {
-  width: 360px;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 40px 20px;
-  border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.123);
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu .result {
-  border-top: 1px solid #5e17eb18;
-  border-left: 1px solid #5e17eb18;
-  border-right: 1px solid #5e17eb18;
-  background: #00051de8;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu .result div {
-  padding: 5px 0px;
-  text-align: center;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu .result div h1 {
-  font-size: 30px;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu .total {
-  border-left: 1px solid #5e17eb18;
-  border-right: 1px solid #5e17eb18;
-  border-bottom: 1px solid #5e17eb18;
-  background: #00051de8;
-  width: 100%;
-  padding: 15px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu .total div {
-  text-align: center;
-  padding: 5px 0px;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu .total div h3 {
-  color: white;
-  font-size: 20px;
-  font-weight: normal;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-izq-menu .total div p {
-  font-weight: bold;
-  font-size: 40px;
 }
 
 .seccion-Bienvenida .sec-bienvenida .d-central {
@@ -273,44 +358,13 @@ header .d-header .d-menu div .botonDonar {
       flex-wrap: wrap;
 }
 
-.seccion-Bienvenida .sec-bienvenida .d-central .resultados-paises #tarjeta {
-  border: 2px solid #5e17eb18;
-  background-color: #00051de8;
-  width: 400px;
-  margin: 20px auto;
-  border-radius: 10px;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-central .resultados-paises #tarjeta div {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-central .resultados-paises #tarjeta div h4 {
-  font-weight: bold;
-  color: white;
-  font-size: 35px;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-central .resultados-paises #tarjeta div p {
-  margin: 0;
-  padding: 0px 10px;
-  font-size: 20px;
-}
-
-.seccion-Bienvenida .sec-bienvenida .d-central .resultados-paises #tarjeta div p span {
-  font-weight: normal;
+@media screen and (max-width: 1100px) {
+  .seccion-Bienvenida .sec-bienvenida {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .seccion-Bienvenida .sec-bienvenida .d-central {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

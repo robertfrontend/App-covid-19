@@ -1,0 +1,28 @@
+// ---Tarjeta tracking----
+#tarjeta{
+    border:2px solid #5e17eb18;
+    background-color: $negrito;
+    width:400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    div{
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        h4{
+            font-weight: bold;
+            color: white;
+            font-size: 35px;
+        }
+        p{
+            margin: 0;
+            padding: 0px 10px;
+            font-size: 20px;
+            span {
+                font-weight: normal;
+            }
+        }
+    }
+}

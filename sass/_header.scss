@@ -1,0 +1,79 @@
+header {
+    width: 100%;
+    .d-header{
+        width: 100%;
+        .d-menu{ 
+            width: 100%;
+            height: 12vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            .d-logo{
+                width: 20%;
+                p{
+                    color: white;
+                    margin: 0;
+                    font-size: 150%;
+                }
+            }
+            nav {
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                a {
+                    color: rgba(255, 255, 255, 0.74);
+                    text-decoration: none;
+                    font-size: 16px;
+                    margin: 0px 10px;
+                }
+            }
+            div {
+                width: 30%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                .botonDonar{
+                    border: 1.5px solid $waring;
+                    font-weight: bold;
+                    padding: 5px 30px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    color: $waring;
+                }
+
+            }
+        }
+        @media screen and(max-width:$breackPoint10){
+            .d-menu{
+                flex-wrap: wrap;
+                padding: 0px;
+                height: auto;
+                .d-logo {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                }
+                nav {
+                    width: 100%;
+                    padding: 10px;
+                    flex-wrap: wrap;
+                }
+                div {
+                    width: 100%;
+                    justify-content: center;
+                    padding: 10px;
+                    align-items: center;
+                    a {
+                        padding: 5px 80px !important;
+                    }
+                }
+            }
+        }
+    }
+}

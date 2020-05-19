@@ -1,0 +1,61 @@
+.d-izq-menu{
+    width: 360px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 30px;         
+    background-color: rgba(0, 0, 0, 0.123);
+
+    .result{
+        border-top: 1px solid $mariCla;
+        border-left: 1px solid $mariCla;
+        border-right: 1px solid $mariCla;
+        background: $negrito;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        div {
+            padding: 5px 0px;
+            text-align: center;
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+    .total {
+        border-left: 1px solid $mariCla;
+        border-right: 1px solid $mariCla;
+        border-bottom: 1px solid $mariCla;
+        background: $negrito;
+        width: 100%;
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div {
+            text-align: center;
+            padding: 5px 0px;
+            h3 {
+                color: white;
+                font-size: 20px;
+                font-weight: normal;
+            }
+            p {
+                font-weight: bold;
+                font-size: 40px;
+            }
+        }
+    }
+
+    @media screen and(max-width:$breackPoint10){
+        width: 100%;
+    }
+
+}

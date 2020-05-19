@@ -1,89 +1,7 @@
-$marino: #5e17eb;
-$cielo: #00bdd3;
-$negrito:  #00051de8;
-$negroso:  #00051dc4;
-$waring: #ffc107;
-$danger: #dc3545;
-$mariCla:#5e17eb18;
-
-$breackPoint13: 1310px;
-
-body {
-    background-color: #00051d;
-    h1,
-    p,
-    label {
-        color: white;
-        margin: 0;
-    }
-    overflow-x: hidden;
-    font-weight: bold;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body::-webkit-scrollbar{
-	width: 10px;
-	background:transparent;
-}
-
-body::-webkit-scrollbar-thumb{
-	background: royalblue;
-	border-radius: 30px;
-}
-
-header {
-    width: 100%;
-    .d-header{
-        width: 100%;
-        .d-menu{ 
-            width: 100%;
-            height: 12vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            .d-logo{
-                width: 20%;
-                p{
-                    color: white;
-                    margin: 0;
-                    font-size: 25px;
-                }
-            }
-            nav {
-                width: 50%;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                a {
-                    color: rgba(255, 255, 255, 0.74);
-                    text-decoration: none;
-                    font-size: 16px;
-                    margin: 0px 10px;
-                }
-            }
-            div {
-                width: 30%;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-                align-items: center;
-                .botonDonar{
-                    border: 1.5px solid $waring;
-                    font-weight: bold;
-                    padding: 5px 30px;
-                    border-radius: 6px;
-                    text-decoration: none;
-                    color: $waring;
-                }
-            }
-        }
-    }
-}
+@import './variables';
+@import './header';
+@import './tarjeta';
+@import './menu-izquierdo';
 
 .seccion-Bienvenida{
     width: 100%;
@@ -98,66 +16,9 @@ header {
         width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap !important;
         justify-content: center;
         align-items: center;
-        .d-izq-menu{
-            width: 360px;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            border-radius: 30px;         
-            background-color: rgba(0, 0, 0, 0.123);
 
-            .result{
-                border-top: 1px solid $mariCla;
-                border-left: 1px solid $mariCla;
-                border-right: 1px solid $mariCla;
-                background: $negrito;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 15px;
-                div {
-                    padding: 5px 0px;
-                    text-align: center;
-                    h1 {
-                        font-size: 30px;
-                    }
-                }
-            }
-            .total {
-                border-left: 1px solid $mariCla;
-                border-right: 1px solid $mariCla;
-                border-bottom: 1px solid $mariCla;
-                background: $negrito;
-                width: 100%;
-                padding: 15px 0px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                div {
-                    text-align: center;
-                    padding: 5px 0px;
-                    h3 {
-                        color: white;
-                        font-size: 20px;
-                        font-weight: normal;
-                    }
-                    p {
-                        font-weight: bold;
-                        font-size: 40px;
-                    }
-                }
-            }
-
-        }
         .d-central{
             width: 950px;
             height: 100vh;
@@ -182,33 +43,13 @@ header {
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                #tarjeta{
-                    border:2px solid #5e17eb18;
-                    background-color: $negrito;
-                    width:400px;
-                    margin: 20px auto;
-                    border-radius: 10px;
-                    div{
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column !important;
-                        justify-content: center;
-                        align-items: center;
-                        h4{
-                            font-weight: bold;
-                            color: white;
-                            font-size: 35px;
-                        }
-                        p{
-                            margin: 0;
-                            padding: 0px 10px;
-                            font-size: 20px;
-                            span {
-                                font-weight: normal;
-                            }
-                        }
-                    }
-                }
+
+            }
+        }
+        @media screen and(max-width:$breackPoint10) {
+            flex-wrap: wrap;
+            .d-central {
+                width: 100%;
             }
         }
     }
