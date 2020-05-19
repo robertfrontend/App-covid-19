@@ -2,6 +2,11 @@ $marino: #5e17eb;
 $cielo: #00bdd3;
 $negrito:  #00051de8;
 $negroso:  #00051dc4;
+$waring: #ffc107;
+$danger: #dc3545;
+$mariCla:#5e17eb18;
+
+$breackPoint13: 1310px;
 
 body {
     background-color: #00051d;
@@ -9,128 +14,202 @@ body {
     p,
     label {
         color: white;
+        margin: 0;
     }
     overflow-x: hidden;
+    font-weight: bold;
 }
 
-.alert{
-    width: 100%;
-    border-radius: 0px !important;
-    text-align: center;
-    color: white;
-    background-color: $negrito;
-    font-weight: normal;
-    padding: 20px 10px;
-    a{
-        font-weight: bold;
-        color: white;
-    }
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+	width: 10px;
+	background:transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+	background: royalblue;
+	border-radius: 30px;
 }
 
 header {
-    #div-header{
+    width: 100%;
+    .d-header{
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        div {
-            width: 80%;
-        }
-        h1 {
-            font-size: 350%;
-            font-weight: bold;
-            @media screen and(max-width:577px) {
-                    font-size: 250%;
+        .d-menu{ 
+            width: 100%;
+            height: 12vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            .d-logo{
+                width: 20%;
+                p{
+                    color: white;
+                    margin: 0;
+                    font-size: 25px;
+                }
             }
-        }
-        P {
-            font-size: 20px;
+            nav {
+                width: 50%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                a {
+                    color: rgba(255, 255, 255, 0.74);
+                    text-decoration: none;
+                    font-size: 16px;
+                    margin: 0px 10px;
+                }
+            }
+            div {
+                width: 30%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                .botonDonar{
+                    border: 1.5px solid $waring;
+                    font-weight: bold;
+                    padding: 5px 30px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    color: $waring;
+                }
+            }
         }
     }
 }
 
-.d-total {
+.seccion-Bienvenida{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    div {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #94949417;
-        padding: 10px;
-        h1 {
-            font-size: 30px;
-            font-weight: bold;
-        }
-        p {
-            font-size: 30px;
-            font-weight: bold;
-            span {
-                font-weight: normal;
-                color: white;
-            }
-        }
+    .d-anuncio{
+        width: 100%;
+        height: 5vh;
     }
-}
-
-.d-buscador{
-    width: 100%;
-    padding: 10px 0px;
-    div {
+    p {
+        margin: 0;
+    }
+    .sec-bienvenida{
         width: 100%;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap !important;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        a {
-            margin: 10px 20px;
-        }
-    }
-}
+        .d-izq-menu{
+            width: 360px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            border-radius: 30px;         
+            background-color: rgba(0, 0, 0, 0.123);
 
-.paises {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    #tarjeta{
-        width: 350px;
-        margin: 20px auto;
-        background-color: $negrito;
-        border-radius: 40px;
-        border: 5px solid $marino;
-        color: white !important;
-        padding: 20px;
-        div {
-            h4{
-                text-decoration: underline $marino;
+            .result{
+                border-top: 1px solid $mariCla;
+                border-left: 1px solid $mariCla;
+                border-right: 1px solid $mariCla;
+                background: $negrito;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                div {
+                    padding: 5px 0px;
+                    text-align: center;
+                    h1 {
+                        font-size: 30px;
+                    }
+                }
             }
-            p {
-                margin: 0px;
+            .total {
+                border-left: 1px solid $mariCla;
+                border-right: 1px solid $mariCla;
+                border-bottom: 1px solid $mariCla;
+                background: $negrito;
+                width: 100%;
+                padding: 15px 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                div {
+                    text-align: center;
+                    padding: 5px 0px;
+                    h3 {
+                        color: white;
+                        font-size: 20px;
+                        font-weight: normal;
+                    }
+                    p {
+                        font-weight: bold;
+                        font-size: 40px;
+                    }
+                }
             }
-        }
-    }
-}
 
-footer{
-    .d-footer{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        div {
-            width: 500px;
-            margin: 10px auto;
-            text-align: center;
+        }
+        .d-central{
+            width: 950px;
+            height: 100vh;
+            margin: 0px auto;
+            background-color: rgba(0, 0, 0, 0.123);
+            overflow-y: scroll;
+            padding: 10px 0px;
+            border-radius: 20px;
+            &::-webkit-scrollbar {
+                width: 10px;
+                background:transparent;
+            }
+            &::-webkit-scrollbar-thumb{
+                background: rgb(250, 250, 250);
+                border-radius: 30px;
+                height: 80px !important;
+            }
+            .resultados-paises {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                #tarjeta{
+                    border:2px solid #5e17eb18;
+                    background-color: $negrito;
+                    width:400px;
+                    margin: 20px auto;
+                    border-radius: 10px;
+                    div{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column !important;
+                        justify-content: center;
+                        align-items: center;
+                        h4{
+                            font-weight: bold;
+                            color: white;
+                            font-size: 35px;
+                        }
+                        p{
+                            margin: 0;
+                            padding: 0px 10px;
+                            font-size: 20px;
+                            span {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
