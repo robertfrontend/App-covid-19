@@ -45,6 +45,35 @@
                 flex-wrap: wrap;
                 
             }
+            .d-select{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap !important;
+                p {
+                    font-size: 20px;
+                    margin: 10px 20px;
+                }
+                select {
+                    margin: 10px 20px;
+                    width: 50%;
+                    background-color: transparent;
+                    border: 2px solid white;
+                    color: white;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    padding: 10px;
+                    option {
+
+                    }
+                    
+                    &:hover {
+                        background-color: rgb(6, 0, 34);
+                    }
+                }
+            }
         }
         @media screen and(max-width:$breackPoint10) {
             flex-wrap: wrap;
@@ -54,3 +83,4 @@
         }
     }
 }
+

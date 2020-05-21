@@ -11,10 +11,19 @@
         flex-direction: column !important;
         justify-content: center;
         align-items: center;
+        text-align: center;
         h4{
             font-weight: bold;
             color: white;
             font-size: 35px;
+        }
+        h5{
+            color: white;
+            font-size: 18px;
+            font-weight: normal;
+            span {
+                font-weight: bold;
+            }
         }
         p{
             margin: 0;
