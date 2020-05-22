@@ -4,18 +4,26 @@ fetch(apiSelect)
         return res.json()
     })
     .then(datos => {
+
         
         htmlSelect = '';
+
+        htmlSelect =`
+            <option value="0">Selecionar Pais</option>
+        
+        `;
         
         datos.forEach(paises => {
-            const {countryregion, countrycode, confirmed } = paises
+            const {countryregion, countrycode, provincestate } = paises
             if(countrycode !== undefined) {
+
                 htmlSelect += `
                     <option id="" value='${countrycode["iso2"]},${countrycode["iso3"]}'>
-                    ${countryregion}
+                    ${countryregion}    ${provincestate}
                     </option>
-                `
+                `;
             }
+
         })
 
         document.getElementById('selecionPaises').innerHTML = htmlSelect
@@ -78,3 +86,4 @@ fetch(apiSelect)
             })
         } )
     })
+    
