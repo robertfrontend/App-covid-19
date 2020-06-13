@@ -25,6 +25,10 @@
                 font-weight: bold;
             }
         }
+        h4 {
+            font-size: 30px;
+            
+        }
         p{
             margin: 0;
             padding: 0px 10px;
@@ -34,5 +38,14 @@
                 font-weight: normal;
             }
         }
+    }
+    @media screen and(max-width:$breackPoint10){ 
+        width: 500px;
+        div {
+            width: 100% !important;
+        }
+    }
+    @media screen and(max-width: 550px ) {
+        width: 100%;
     }
 }

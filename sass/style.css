@@ -312,6 +312,10 @@ header .d-header .d-menu div input {
   font-weight: bold;
 }
 
+#tarjeta div h4 {
+  font-size: 30px;
+}
+
 #tarjeta div p {
   margin: 0;
   padding: 0px 10px;
@@ -321,6 +325,21 @@ header .d-header .d-menu div input {
 
 #tarjeta div p span {
   font-weight: normal;
+}
+
+@media screen and (max-width: 1100px) {
+  #tarjeta {
+    width: 500px;
+  }
+  #tarjeta div {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #tarjeta {
+    width: 100%;
+  }
 }
 
 .d-izq-menu {

@@ -2,7 +2,6 @@ const dcarga = `
 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 `;
 
-
 window.onload = () => {
     
     // mostrar el total del mundo
