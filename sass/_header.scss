@@ -11,10 +11,12 @@ header {
             align-items: center;
             .d-logo{
                 width: 20%;
-                p{
+                a{
                     color: white;
                     margin: 0;
                     font-size: 150%;
+                    text-decoration: none;
+                    text-align: center;
                 }
             }
             nav {

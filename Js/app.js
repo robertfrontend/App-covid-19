@@ -2,6 +2,62 @@ const dcarga = `
 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 `;
 
+
+class MyClass {
+    myHtml(confirmed,deaths,recovered) {
+        htmlTotal += `
+                <div>
+                    <p class="text-warning">
+                        ${Intl.NumberFormat().format(confirmed)}
+                    </p>
+                    <h3>Casos Confirmados</h3>
+                </div>
+                <div>
+                    <p class="text-danger" >
+                        ${Intl.NumberFormat().format(deaths)}
+                    </p>
+                    <h3>Muertes</h3>
+
+                </div>
+                <div>
+                    <p class="text-success" >
+                    ${Intl.NumberFormat().format(recovered)}
+                    </p>
+                    <h3>Recuperados</h3>
+                </div>
+        `;
+    };
+    todosPaises(countryregion, confirmed, deaths,recovered) {
+        htmlRes += `
+            <div class="card text-dark" id="tarjeta" >
+                <div class="card-body">
+                    <div >
+                        <h4 class="card-title">
+                            <span class="">
+                            </span>
+                            ${countryregion}
+                        </h4>                     
+                    </div>
+                    <div class="" id="da">
+                        <p class="card-text text-warning ">
+                            <span class="text-light">Confirmados:</span>
+                            ${Intl.NumberFormat().format(confirmed)} 
+                        </p>
+                        <p class="card-text text-danger">
+                            <span class="text-light">Muertes: </span>
+                            ${Intl.NumberFormat().format(deaths)} 
+                        </p>
+                        <p class="card-text  text-success " >
+                            <span class="text-light">Recuperados:</span>
+                            ${Intl.NumberFormat().format(recovered)} 
+                        </p>
+                    </div>
+                </div>
+            </div>          
+        `;
+    }
+};
+
 window.onload = () => {
     
     // mostrar el total del mundo
@@ -20,28 +76,14 @@ window.onload = () => {
             const {confirmed, deaths, recovered} = data
             htmlTotal = '';
 
-            // reteenmos los datos        
-            htmlTotal += `
-                    <div>
-                        <p class="text-warning">
-                            ${Intl.NumberFormat().format(confirmed)}
-                        </p>
-                        <h3>Casos Confirmados</h3>
-                    </div>
-                    <div>
-                        <p class="text-danger" >
-                            ${Intl.NumberFormat().format(deaths)}
-                        </p>
-                        <h3>Muertes</h3>
-    
-                    </div>
-                    <div>
-                        <p class="text-success" >
-                        ${Intl.NumberFormat().format(recovered)}
-                        </p>
-                        <h3>Recuperados</h3>
-                    </div>
-            `;
+            const newHtml = new MyClass();
+
+            newHtml.myHtml(
+                confirmed, 
+                deaths, 
+                recovered
+            );
+
             // mandamos los datos al html
             document.querySelector('.total').innerHTML = htmlTotal;
         });
@@ -65,34 +107,14 @@ window.onload = () => {
                 datos.forEach(paises => {
     
                     const {countryregion, confirmed, deaths, recovered} = paises;
-    
-                    htmlRes += `
-                        <div class="card text-dark" id="tarjeta" >
-                            <div class="card-body">
-                                <div >
-                                    <h4 class="card-title">
-                                        <span class="">
-                                        </span>
-                                        ${countryregion}
-                                    </h4>                     
-                                </div>
-                                <div class="" id="da">
-                                    <p class="card-text text-warning ">
-                                        <span class="text-light">Confirmados:</span>
-                                        ${Intl.NumberFormat().format(confirmed)} 
-                                    </p>
-                                    <p class="card-text text-danger">
-                                        <span class="text-light">Muertes: </span>
-                                        ${Intl.NumberFormat().format(deaths)} 
-                                    </p>
-                                    <p class="card-text  text-success " >
-                                        <span class="text-light">Recuperados:</span>
-                                        ${Intl.NumberFormat().format(recovered)} 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>          
-                    `;
+                    
+                    const newHtml = new MyClass();
+
+                    newHtml.todosPaises(
+                        countryregion, confirmed,
+                        deaths, recovered    
+                    )
+
                 });
                 document.querySelector('.resultados-paises').innerHTML = htmlRes;
                 document.querySelector('.d-carga ').innerHTML = ''

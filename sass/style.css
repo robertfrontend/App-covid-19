@@ -163,10 +163,12 @@ header .d-header .d-menu .d-logo {
   width: 20%;
 }
 
-header .d-header .d-menu .d-logo p {
+header .d-header .d-menu .d-logo a {
   color: white;
   margin: 0;
   font-size: 150%;
+  text-decoration: none;
+  text-align: center;
 }
 
 header .d-header .d-menu nav {
