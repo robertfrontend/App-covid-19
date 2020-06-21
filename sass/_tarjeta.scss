@@ -2,7 +2,7 @@
 #tarjeta{
     border:2px solid #5e17eb18;
     background-color: $negrito;
-    width:400px;
+    width:300px;
     margin: 20px auto;
     border-radius: 10px;
     div{
@@ -15,19 +15,15 @@
         h4{
             font-weight: bold;
             color: white;
-            font-size: 35px;
+            font-size: 20px;
         }
         h5{
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: normal;
             span {
                 font-weight: bold;
             }
-        }
-        h4 {
-            font-size: 30px;
-            
         }
         p{
             margin: 0;

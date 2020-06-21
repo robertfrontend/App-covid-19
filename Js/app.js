@@ -2,11 +2,10 @@ const dcarga = `
 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 `;
 
-
 class MyClass {
     myHtml(confirmed,deaths,recovered) {
         htmlTotal += `
-                <div>
+                <div class="">
                     <p class="text-warning">
                         ${Intl.NumberFormat().format(confirmed)}
                     </p>
@@ -93,10 +92,10 @@ window.onload = () => {
     todosLosPaises();
     
     function todosLosPaises() {
-
         //link de la api
         const linkApi = 
         `https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest`;
+
         // llamar api
         fetch(linkApi)
             .then(respuesta => {
@@ -112,7 +111,7 @@ window.onload = () => {
 
                     newHtml.todosPaises(
                         countryregion, confirmed,
-                        deaths, recovered    
+                        deaths, recovered
                     )
 
                 });

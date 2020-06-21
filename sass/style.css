@@ -275,7 +275,7 @@ header .d-header .d-menu div input {
 #tarjeta {
   border: 2px solid #5e17eb18;
   background-color: #00051de8;
-  width: 400px;
+  width: 300px;
   margin: 20px auto;
   border-radius: 10px;
 }
@@ -301,21 +301,17 @@ header .d-header .d-menu div input {
 #tarjeta div h4 {
   font-weight: bold;
   color: white;
-  font-size: 35px;
+  font-size: 20px;
 }
 
 #tarjeta div h5 {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
 }
 
 #tarjeta div h5 span {
   font-weight: bold;
-}
-
-#tarjeta div h4 {
-  font-size: 30px;
 }
 
 #tarjeta div p {
