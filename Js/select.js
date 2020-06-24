@@ -10,7 +10,6 @@ fetch(apiSelect)
 
         htmlSelect =`
             <option value="0">Selecionar Pais</option>
-        
         `;
         
         datos.forEach(paises => {
@@ -30,6 +29,7 @@ fetch(apiSelect)
 
         const select = document.querySelector('#selecionPaises')
         select.addEventListener('change', () => {
+            
             const valorSelect = select.value;
 
             valoresISO =valorSelect.split(',')
@@ -62,7 +62,7 @@ fetch(apiSelect)
                                             Provincia/Estado
                                         </span>
                                         ${provincestate}
-                                    </h5>                     
+                                    </h5> 
                                 </div>
                                 <div class="" id="da">
                                     <p class="card-text text-warning ">

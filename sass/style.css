@@ -273,7 +273,6 @@ header .d-header .d-menu div input {
 }
 
 #tarjeta {
-  border: 2px solid #5e17eb18;
   background-color: #00051de8;
   width: 300px;
   margin: 20px auto;
@@ -362,9 +361,6 @@ header .d-header .d-menu div input {
 }
 
 .d-izq-menu .result {
-  border-top: 1px solid #5e17eb18;
-  border-left: 1px solid #5e17eb18;
-  border-right: 1px solid #5e17eb18;
   background: #00051de8;
   width: 100%;
   display: -webkit-box;
@@ -393,9 +389,6 @@ header .d-header .d-menu div input {
 }
 
 .d-izq-menu .total {
-  border-left: 1px solid #5e17eb18;
-  border-right: 1px solid #5e17eb18;
-  border-bottom: 1px solid #5e17eb18;
   background: #00051de8;
   width: 100%;
   padding: 15px 0px;
@@ -428,6 +421,37 @@ header .d-header .d-menu div input {
 .d-izq-menu .total div p {
   font-weight: bold;
   font-size: 40px;
+}
+
+.d-izq-menu .redes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.d-izq-menu .redes a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.d-izq-menu .redes a ion-icon {
+  font-size: 30px;
+  color: white;
+}
+
+.d-izq-menu .redes a:hover ion-icon {
+  color: rgba(255, 255, 255, 0.568);
 }
 
 @media screen and (max-width: 1100px) {
@@ -538,6 +562,10 @@ header .d-header .d-menu div input {
   border-radius: 5px;
   font-weight: bold;
   padding: 10px;
+}
+
+.seccion-Bienvenida .sec-bienvenida .d-central .d-select select option {
+  background-color: #060022;
 }
 
 .seccion-Bienvenida .sec-bienvenida .d-central .d-select select:hover {

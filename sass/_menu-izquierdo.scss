@@ -10,9 +10,6 @@
     background-color: rgba(0, 0, 0, 0.123);
 
     .result{
-        border-top: 1px solid $mariCla;
-        border-left: 1px solid $mariCla;
-        border-right: 1px solid $mariCla;
         background: $negrito;
         width: 100%;
         display: flex;
@@ -29,9 +26,6 @@
         }
     }
     .total {
-        border-left: 1px solid $mariCla;
-        border-right: 1px solid $mariCla;
-        border-bottom: 1px solid $mariCla;
         background: $negrito;
         width: 100%;
         padding: 15px 0px;
@@ -50,6 +44,27 @@
             p {
                 font-weight: bold;
                 font-size: 40px;
+            }
+        }
+    }
+
+    .redes {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        a {
+            padding: 10px;
+            text-decoration: none;
+            ion-icon{
+                font-size: 30px;
+                color: white;
+            }
+            &:hover {
+                ion-icon {
+                   color: rgba(255, 255, 255, 0.568);
+                }
             }
         }
     }
