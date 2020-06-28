@@ -5,7 +5,6 @@ fetch(apiSelect)
     })
     .then(datos => {
 
-        
         htmlSelect = '';
 
         htmlSelect =`
@@ -35,7 +34,9 @@ fetch(apiSelect)
             valoresISO =valorSelect.split(',')
 
             valorISO1 = valoresISO[0]
+
             valorISO2 = valoresISO[1]
+
             const linkBusc = 
             `https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest?iso2=${valorISO1}&iso3=${valorISO2}`
             fetch(linkBusc)
@@ -83,6 +84,12 @@ fetch(apiSelect)
                     `;
                 })
                 document.querySelector('.resultados-paises').innerHTML = htmlResultss;
+            })
+
+            .catch(() => {
+                if(status === 400){
+                    alert('Hubo un error')
+                }
             })
         } )
     })
