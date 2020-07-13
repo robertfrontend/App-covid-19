@@ -274,9 +274,9 @@ header .d-header .d-menu div input {
 
 #tarjeta {
   background-color: #00051de8;
-  width: 300px;
+  width: 400px;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 #tarjeta div {
@@ -322,6 +322,12 @@ header .d-header .d-menu div input {
 
 #tarjeta div p span {
   font-weight: normal;
+}
+
+#tarjeta #da {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.068);
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 1100px) {

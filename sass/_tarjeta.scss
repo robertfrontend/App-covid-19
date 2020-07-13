@@ -1,9 +1,9 @@
 // ---Tarjeta tracking----
 #tarjeta{
     background-color: $negrito;
-    width:300px;
+    width:400px;
     margin: 20px auto;
-    border-radius: 10px;
+    border-radius: 8px;
     div{
         width: 100%;
         display: flex;
@@ -33,6 +33,11 @@
                 font-weight: normal;
             }
         }
+    }
+    #da {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.068);
+        border-radius: 8px;
     }
     @media screen and(max-width:$breackPoint10){ 
         width: 500px;
