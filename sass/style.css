@@ -578,6 +578,41 @@ header .d-header .d-menu div input {
   background-color: #060022;
 }
 
+.seccion-Bienvenida .sec-bienvenida .d-central .restart {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.seccion-Bienvenida .sec-bienvenida .d-central .restart div {
+  padding: 0 1em;
+}
+
+.seccion-Bienvenida .sec-bienvenida .d-central .restart div p {
+  margin: 0;
+  font-weight: normal;
+}
+
+.seccion-Bienvenida .sec-bienvenida .d-central .restartOpen {
+  opacity: 1;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
 @media screen and (max-width: 1100px) {
   .seccion-Bienvenida .sec-bienvenida {
     -ms-flex-wrap: wrap;

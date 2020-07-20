@@ -58,7 +58,6 @@ class MyClass {
 };
 
 window.onload = () => {
-    
     // mostrar el total del mundo
 
     // link de la api
@@ -121,5 +120,3 @@ window.onload = () => {
             });
     }// fin function todosLosPaises
 }
-
-
