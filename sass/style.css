@@ -622,4 +622,31 @@ header .d-header .d-menu div input {
     width: 100%;
   }
 }
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div {
+  padding: 2em 0;
+  text-align: center;
+}
+
+footer div p {
+  margin: 0;
+  font-weight: normal;
+}
 /*# sourceMappingURL=style.css.map */
