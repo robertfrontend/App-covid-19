@@ -148,18 +148,3 @@ window.onload = () => {
 
     }// fin function todosLosPaises
 }
-
-function clickTarjetas() {
-    let tarjeta = document.querySelector('#tarjeta')
-
-    tarjeta.addEventListener('click', (e) => {
-        e.preventDefault();
-        if(e.target) {
-            e.target.parentElement.parentElement.remove()
-        }
-    })
-}
-
-setTimeout(() => {
-    clickTarjetas()
-},1000)

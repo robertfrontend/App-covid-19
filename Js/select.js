@@ -52,10 +52,10 @@ fetch(apiSelect)
                 let htmlResultss = '';
 
                 data.forEach(resultPais => {
-
                     // destructuring de la api
                     const {countryregion, countrycode, confirmed,deaths,recovered,
                         provincestate} = resultPais
+
 
                             htmlResultss += `
                             <div class="card text-dark" id="tarjeta" >
