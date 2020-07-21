@@ -18,7 +18,7 @@ class MyClass {
                     <h3>Muertes</h3>
 
                 </div>
-                <div>
+                <div >
                     <p class="text-success" >
                     ${Intl.NumberFormat().format(recovered)}
                     </p>
@@ -26,15 +26,15 @@ class MyClass {
                 </div>
         `;
     };
-    todosPaises(countryregion, confirmed, deaths,recovered) {
+    todosPaises(countryregion, provincestate, confirmed, deaths,recovered, lastupdate) {
         htmlRes += `
-            <div class="card text-dark" id="tarjeta" >
+            <div class="card text-dark" id="tarjeta">
                 <div class="card-body">
                     <div >
                         <h4 class="card-title">
                             <span class="">
                             </span>
-                            ${countryregion}
+                            ${countryregion} ${(provincestate.trim()!=="")? `(${provincestate})`:""}
                         </h4>                     
                     </div>
                     <div class="" id="da">
@@ -49,6 +49,10 @@ class MyClass {
                         <p class="card-text  text-success " >
                             <span class="text-light">Recuperados:</span>
                             ${Intl.NumberFormat().format(recovered)} 
+                        </p>
+                        <p class="card-text  text-primary " >
+                            <span class="text-light">Actualizado:</span>
+                            ${lastupdate} 
                         </p>
                     </div>
                 </div>
@@ -102,18 +106,39 @@ window.onload = () => {
             })
             .then(datos => {
                 htmlRes = ''
+                const countriesList = []; //array que contendra los nombres de los paises//
                 datos.forEach(paises => {
-    
-                    const {countryregion, confirmed, deaths, recovered} = paises;
+                    countriesList.push(paises.countryregion); //agregabdo paises al array 
+
+                    const {countryregion,provincestate, confirmed, deaths, recovered} = paises;
                     
                     const newHtml = new MyClass();
 
+                    let lastupdate = paises.lastupdate;
+
+                    //ultima actualización fecha y hora
+                    //lastupdate = `${lastupdate.substring(0,10)}, ${lastupdate.substring(11,19)}`;
+
+                    //ultima actualación solo fecha
+                    lastupdate = `${lastupdate.substring(0,10)}`;
+
                     newHtml.todosPaises(
-                        countryregion, confirmed,
-                        deaths, recovered
+                        countryregion, provincestate, confirmed,
+                        deaths, recovered, lastupdate
                     )
 
                 });
+
+                //contabilizando paises y paises con algunas pronvincias
+                const numberOfCountriesWithProvinces = countriesList.length;
+                console.log(numberOfCountriesWithProvinces);
+                document.getElementById("number-of-countries-with-provinces").innerHTML = `${numberOfCountriesWithProvinces}`;
+
+                //solo se estan contabilizando los paises , no se estan contando las provincias
+                const countriesListWithoutRepetition = new Set(countriesList); //agregando paises a un set para eliminar los repetidos
+                const numberOfCountries = countriesListWithoutRepetition.size; //obteniendo cantidad de paises
+                document.getElementById("number-of-countries").innerHTML = `${numberOfCountries}`;
+
                 document.querySelector('.resultados-paises').innerHTML = htmlRes;
                 document.querySelector('.d-carga ').innerHTML = ''
     
