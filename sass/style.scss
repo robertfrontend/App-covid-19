@@ -3,6 +3,27 @@
 @import './tarjeta';
 @import './menu-izquierdo';
 
+.countries-numbers{
+    color:white; 
+    width:80%;
+    margin:0 auto;
+    margin-top:15px;
+    background:rgba(255,255,255,0.1);
+    border-radius:10px; padding:10px 
+    15px; box-sizing:border-box;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .countries-numbers #p1 span{
+    color:seagreen;
+  }
+  
+  .countries-numbers #p2 span{
+    color:orange;
+  }
+
 .seccion-Bienvenida{
     width: 100%;
     .d-carga{
@@ -76,6 +97,7 @@
             }
             .restart{
                 width: 100%;
+                margin:5px 0;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
