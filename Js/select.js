@@ -26,6 +26,7 @@ fetch(apiSelect)
             }
         })
 
+        // imprimir datos en el html
         document.getElementById('selecionPaises').innerHTML = htmlSelect
 
         const select = document.querySelector('#selecionPaises')
@@ -51,14 +52,20 @@ fetch(apiSelect)
             .then(data => {
                 let htmlResultss = '';
 
+                // Mostrar paises selecionados
+                // por el select
                 data.forEach(resultPais => {
                     // destructuring de la api
-                    const {countryregion, countrycode, confirmed,deaths,recovered,
+                    const {countryregion, confirmed,deaths,recovered,
                         provincestate} = resultPais
 
+                            let lastupdate = resultPais.lastupdate;
+
+                            //ultima actualación solo fecha
+                            lastupdate = `${lastupdate.substring(0,10)}`;
 
                             htmlResultss += `
-                            <div class="card text-dark" id="tarjeta" >
+                            <div class="card text-dark tarje-select" id="tarjeta" >
                             <div class="card-body">
                                 <div >
                                     <h4 class="card-title">
@@ -86,11 +93,17 @@ fetch(apiSelect)
                                         <span class="text-light">Recuperados:</span>
                                         ${Intl.NumberFormat().format(recovered)} 
                                     </p>
+                                    <p class="card-text  text-primary " >
+                                        <span class="text-light">Recuperados:</span>
+                                        ${lastupdate} 
+                                    </p>
                                 </div>
                             </div>
                         </div>                          
                     `;
                 })
+
+                // mostrar paises
                 document.querySelector('.resultados-paises').innerHTML = htmlResultss;
             })
 
@@ -109,8 +122,6 @@ fetch(apiSelect)
                     restart.classList.add('restartOpen')
                 },2000)
             }
-            
             setResetear();
-
         } )
     })

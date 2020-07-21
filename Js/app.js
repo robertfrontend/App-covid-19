@@ -26,7 +26,9 @@ class MyClass {
                 </div>
         `;
     };
-    todosPaises(countryregion, provincestate, confirmed, deaths,recovered, lastupdate) {
+
+    todosPaises(countryregion, provincestate, confirmed, deaths, recovered, 
+        lastupdate) {
         htmlRes += `
             <div class="card text-dark" id="tarjeta">
                 <div class="card-body">
@@ -61,6 +63,9 @@ class MyClass {
     }
 };
 
+//-----
+// Cuando cargue la pagina muestra los paises....
+//-----
 window.onload = () => {
     // mostrar el total del mundo
 
@@ -89,7 +94,6 @@ window.onload = () => {
             // mandamos los datos al html
             document.querySelector('.total').innerHTML = htmlTotal;
         });
-
 
     // mostrar todos los paises
     todosLosPaises();
@@ -126,7 +130,6 @@ window.onload = () => {
                         countryregion, provincestate, confirmed,
                         deaths, recovered, lastupdate
                     )
-
                 });
 
                 //contabilizando paises y paises con algunas pronvincias
@@ -143,8 +146,6 @@ window.onload = () => {
                 document.querySelector('.d-carga ').innerHTML = ''
     
             });
-
-
 
     }// fin function todosLosPaises
 }

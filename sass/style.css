@@ -25,27 +25,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 30px;
 }
 
-.countries-numbers{
-  color:white; 
-  width:80%;
-  margin:0 auto;
-  margin-top:15px;
-  background:rgba(255,255,255,0.1);
-  border-radius:10px; padding:10px 
-  15px; box-sizing:border-box;
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.countries-numbers #p1 span{
-  color:seagreen;
-}
-
-.countries-numbers #p2 span{
-  color:orange;
-}
-
 .lds-ellipsis {
   display: inline-block;
   position: relative;
@@ -214,18 +193,17 @@ header .d-header .d-menu nav a {
   text-decoration: none;
   font-size: 16px;
   margin: 0px 10px;
-  border-bottom:2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
-
 header .d-header .d-menu nav a:hover {
-  color:gray;
-  border-bottom:2px solid orange;
-  transition:all 0.5s linear;
-  -webkit-transition:all 0.5s linear;
-  -moz-transition:all 0.5s linear;
-  -ms-transition:all 0.5s linear;
-  -o-transition:all 0.5s linear;
+  color: gray;
+  border-bottom: 2px solid orange;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 header .d-header .d-menu div {
@@ -427,6 +405,35 @@ header .d-header .d-menu div input {
   font-size: 30px;
 }
 
+.d-izq-menu .result div span svg {
+  font-weight: bold;
+  font-size: 1.5em;
+  -webkit-animation-name: vivo;
+          animation-name: vivo;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes vivo {
+  from {
+    color: rgba(252, 252, 252, 0);
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes vivo {
+  from {
+    color: rgba(252, 252, 252, 0);
+  }
+  to {
+    color: white;
+  }
+}
+
 .d-izq-menu .total {
   background: #00051de8;
   width: 100%;
@@ -497,6 +504,34 @@ header .d-header .d-menu div input {
   .d-izq-menu {
     width: 100%;
   }
+}
+
+.countries-numbers {
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px  15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.countries-numbers #p1 span {
+  color: seagreen;
+}
+
+.countries-numbers #p2 span {
+  color: orange;
 }
 
 .seccion-Bienvenida {
@@ -613,7 +648,7 @@ header .d-header .d-menu div input {
 
 .seccion-Bienvenida .sec-bienvenida .d-central .restart {
   width: 100%;
-  margin:5px 0;
+  margin: 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -23,6 +23,20 @@
             h1 {
                 font-size: 30px;
             }
+            span {
+                svg {
+                    font-weight: bold;
+                    font-size: 1.5em;
+                    animation-name: vivo;
+                    animation-duration: 1.5s;
+                    animation-iteration-count: infinite;
+                }
+
+                @keyframes vivo {
+                    from { color: rgba(252, 252, 252, 0); }
+                    to {  color: white; }
+                }
+            }
         }
     }
     .total {
