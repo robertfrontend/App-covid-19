@@ -33,7 +33,7 @@ fetch(apiSelect)
             
             const valorSelect = select.value;
 
-            valoresISO =valorSelect.split(',')
+            valoresISO = valorSelect.split(',')
 
             valorISO1 = valoresISO[0]
 
