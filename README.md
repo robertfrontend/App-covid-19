@@ -1,10 +1,10 @@
-## App-covid-19
+# App-covid-19
 Tracking de coronavirus a nivel mundial
 
-# Creado con: 
+## Creado con: 
 
 HTML, Sass, Bootstrap, JavaScript
 
-APIS:
+## APIS:
 https://cov19.cc/report.json
 https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/lates
