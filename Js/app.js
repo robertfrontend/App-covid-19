@@ -3,7 +3,7 @@ const dcarga = `
 `;
 
 class MyClass {
-    myHtml(confirmed,deaths,recovered) {
+    myHtml(confirmed,deaths,recovered, test) {
         htmlTotal += `
                 <div class="">
                     <p class="text-warning">
@@ -23,6 +23,12 @@ class MyClass {
                     ${Intl.NumberFormat().format(recovered)}
                     </p>
                     <h3>Recuperados</h3>
+                </div>
+                <div >
+                    <p class="text-light" >
+                    ${Intl.NumberFormat().format(test)}
+                    </p>
+                    <h3>Pruebas Realizadas</h3>
                 </div>
         `;
     };
@@ -70,7 +76,7 @@ window.onload = () => {
     // mostrar el total del mundo
 
     // link de la api
-    const linkTotal = 'https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/brief';
+    const linkTotal = 'https://cov19.cc/report.json';
     // spiner de carga
     document.querySelector('.d-carga ').innerHTML = dcarga;
 
@@ -80,15 +86,15 @@ window.onload = () => {
         })
         .then(data => {
 
-            const {confirmed, deaths, recovered} = data
             htmlTotal = '';
 
             const newHtml = new MyClass();
 
             newHtml.myHtml(
-                confirmed, 
-                deaths, 
-                recovered
+                data.regions.world.totals.confirmed, 
+                data.regions.world.totals.deaths, 
+                data.regions.world.totals.deaths, 
+                data.regions.world.totals.tests, 
             );
 
             // mandamos los datos al html
