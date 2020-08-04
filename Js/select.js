@@ -120,7 +120,7 @@ fetch(apiSelect)
             function setResetear() {
                 setTimeout(() => {
                     restart.classList.add('restartOpen')
-                },2000)
+                },1000)
             }
             setResetear();
         } )
