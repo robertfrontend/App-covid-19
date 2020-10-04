@@ -366,12 +366,6 @@ header .d-header .d-menu div input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 40px 20px;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.123);
@@ -556,17 +550,11 @@ header .d-header .d-menu div input {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .seccion-Bienvenida .sec-bienvenida .d-central {
   width: 950px;
-  height: 100vh;
+  height: auto;
   margin: 0px auto;
   background-color: rgba(0, 0, 0, 0.123);
   overflow-y: scroll;
@@ -717,5 +705,23 @@ footer div {
 footer div p {
   margin: 0;
   font-weight: bold;
+}
+
+.flotante_arriba {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background-color: white;
+  font-size: 30px;
+  margin: 0;
+  cursor: pointer;
+  padding: 2px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.flotante_arriba a {
+  color: #00051d;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

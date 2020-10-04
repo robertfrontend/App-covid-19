@@ -37,12 +37,10 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
 
         .d-central{
             width: 950px;
-            height: 100vh;
+            height: auto;
             margin: 0px auto;
             background-color: rgba(0, 0, 0, 0.123);
             overflow-y: scroll;
@@ -139,5 +137,23 @@ footer{
             margin: 0;
             font-weight: bold;
         }
+    }
+}
+
+.flotante_arriba{
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color:white;
+    font-size: 30px;
+    margin: 0;
+    cursor: pointer;
+    padding: 2px 20px;
+    border-radius: 2px;
+    font-weight: bold;
+    a{
+        color: #00051d;
+        text-decoration: none;
+
     }
 }

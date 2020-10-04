@@ -93,7 +93,7 @@ window.onload = () => {
             newHtml.myHtml(
                 data.regions.world.totals.confirmed, 
                 data.regions.world.totals.deaths, 
-                data.regions.world.totals.deaths, 
+                data.regions.world.totals.recovered, 
                 data.regions.world.totals.tests, 
             );
 
