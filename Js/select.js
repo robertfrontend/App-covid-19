@@ -8,7 +8,7 @@ fetch(apiSelect)
         htmlSelect = '';
 
         htmlSelect =`
-            <option value="0" id="todos" >Selecionar Pais</option>
+            <option  value="0" id="todos" >Selecionar Pais</option>
         `; 
 
         // Mostrar los paises en el Select
