@@ -116,7 +116,7 @@ window.onload = () => {
             })
             .then(datos => {
                 htmlRes = ''
-                const countriesList = []; //array que contendra los nombres de los paises//
+                const countriesList = []; //array que contendra los nombres de los paises
                 datos.forEach(paises => {
                     countriesList.push(paises.countryregion); //agregabdo paises al array 
 
@@ -152,6 +152,12 @@ window.onload = () => {
                 document.querySelector('.d-carga ').innerHTML = ''
     
             });
+
+            let restarApi = document.querySelector('#restarApi')
+
+            restarApi.addEventListener('click', () => {
+                todosLosPaises()
+            })
 
     }// fin function todosLosPaises
 }

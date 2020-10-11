@@ -71,6 +71,7 @@
                 justify-content: space-around;
                 align-items: center;
                 flex-wrap: wrap !important;
+                padding: 50px;
                 p {
                     font-size: 20px;
                     margin: 10px 20px;
@@ -87,7 +88,6 @@
                     option {
                         background-color: rgb(6, 0, 34) ;
                     }
-
                     &:hover {
                         background-color: rgb(6, 0, 34);
                     }
